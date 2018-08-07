@@ -17,6 +17,8 @@ namespace Fractions
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            //Fractions First = new Fractions(int.Parse(tb));
         }
     }
 }
