@@ -16,18 +16,36 @@ namespace Fractions
             denominator = den;
         }
 
+        public Fractions PlusFractions(Fractions B)
+        {
+            this.numerator = this.numerator * B.denominator + B.numerator * this.denominator;
+            this.denominator *= B.denominator;
+
+            return this;
+        }
+
+        public Fractions SubstractFractions(Fractions B)
+        {
+            this.numerator = this.numerator * B.denominator - B.numerator * this.denominator;
+            this.denominator *= B.denominator;
+
+            return this;
+        }
+
+
+
         public Fractions MultiFractions(Fractions B)
         {
-            this.numerator = this.numerator * B.numerator;
-            this.denominator = this.denominator * B.denominator;
+            this.numerator *= B.numerator;
+            this.denominator *= B.denominator;
 
             return this;
         }
 
         public Fractions DividingFractions(Fractions B)
         {
-            this.numerator = this.numerator * B.denominator;
-            this.denominator = this.denominator * B.numerator;
+            this.numerator *= B.denominator;
+            this.denominator *= B.numerator;
 
             return this;
         }
