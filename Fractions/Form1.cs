@@ -21,5 +21,23 @@ namespace Fractions
         {
 
         }
+
+        private void btnResult_Click(object sender, EventArgs e)
+        {
+            Fractions First = new Fractions(int.Parse(tbNumerator1.Text), int.Parse(tbDenominator1.Text));
+            Fractions Second = new Fractions(int.Parse(tbNumerator2.Text), int.Parse(tbDenominator2.Text));
+            Fractions Result = new Fractions(0,0);
+
+            switch (cbJob.SelectedItem)
+            {
+                case "*": Result = First.MultiFractions(Second);
+                    break;
+                case "/": Result = First.DividingFractions(Second);
+                    break;
+            }
+
+            tbResultNumerator.Text = First.GetNumerator;
+            tbResultDenominator.Text = First.GetDenominator;
+        }
     }
 }

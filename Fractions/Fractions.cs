@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Fractions
 {
     class Fractions
@@ -33,7 +32,7 @@ namespace Fractions
             return this;
         }
 
-        public string GetNumerator 
+        public string GetNumerator
         {
             get
             {

@@ -28,59 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbNumerator1 = new System.Windows.Forms.TextBox();
+            this.tbDenominator1 = new System.Windows.Forms.TextBox();
+            this.tbNumerator2 = new System.Windows.Forms.TextBox();
+            this.tbDenominator2 = new System.Windows.Forms.TextBox();
+            this.tbResultDenominator = new System.Windows.Forms.TextBox();
+            this.tbResultNumerator = new System.Windows.Forms.TextBox();
             this.cbJob = new System.Windows.Forms.ComboBox();
             this.btnResult = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbNumerator1
             // 
-            this.textBox1.Location = new System.Drawing.Point(224, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(30, 20);
-            this.textBox1.TabIndex = 0;
+            this.tbNumerator1.Location = new System.Drawing.Point(224, 52);
+            this.tbNumerator1.Name = "tbNumerator1";
+            this.tbNumerator1.Size = new System.Drawing.Size(30, 20);
+            this.tbNumerator1.TabIndex = 0;
             // 
-            // textBox2
+            // tbDenominator1
             // 
-            this.textBox2.Location = new System.Drawing.Point(224, 91);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(30, 20);
-            this.textBox2.TabIndex = 1;
+            this.tbDenominator1.Location = new System.Drawing.Point(224, 91);
+            this.tbDenominator1.Name = "tbDenominator1";
+            this.tbDenominator1.Size = new System.Drawing.Size(30, 20);
+            this.tbDenominator1.TabIndex = 1;
             // 
-            // textBox3
+            // tbNumerator2
             // 
-            this.textBox3.Location = new System.Drawing.Point(305, 52);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(30, 20);
-            this.textBox3.TabIndex = 2;
+            this.tbNumerator2.Location = new System.Drawing.Point(305, 52);
+            this.tbNumerator2.Name = "tbNumerator2";
+            this.tbNumerator2.Size = new System.Drawing.Size(30, 20);
+            this.tbNumerator2.TabIndex = 2;
             // 
-            // textBox4
+            // tbDenominator2
             // 
-            this.textBox4.Location = new System.Drawing.Point(305, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(30, 20);
-            this.textBox4.TabIndex = 3;
+            this.tbDenominator2.Location = new System.Drawing.Point(305, 91);
+            this.tbDenominator2.Name = "tbDenominator2";
+            this.tbDenominator2.Size = new System.Drawing.Size(30, 20);
+            this.tbDenominator2.TabIndex = 3;
             // 
-            // textBox5
+            // tbResultDenominator
             // 
-            this.textBox5.Location = new System.Drawing.Point(423, 91);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(30, 20);
-            this.textBox5.TabIndex = 4;
+            this.tbResultDenominator.Location = new System.Drawing.Point(423, 91);
+            this.tbResultDenominator.Name = "tbResultDenominator";
+            this.tbResultDenominator.ReadOnly = true;
+            this.tbResultDenominator.Size = new System.Drawing.Size(30, 20);
+            this.tbResultDenominator.TabIndex = 4;
             // 
-            // textBox6
+            // tbResultNumerator
             // 
-            this.textBox6.Location = new System.Drawing.Point(423, 52);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(30, 20);
-            this.textBox6.TabIndex = 5;
+            this.tbResultNumerator.Location = new System.Drawing.Point(423, 52);
+            this.tbResultNumerator.Name = "tbResultNumerator";
+            this.tbResultNumerator.ReadOnly = true;
+            this.tbResultNumerator.Size = new System.Drawing.Size(30, 20);
+            this.tbResultNumerator.TabIndex = 5;
             // 
             // cbJob
             // 
@@ -103,6 +103,7 @@
             this.btnResult.TabIndex = 8;
             this.btnResult.Text = "Результат";
             this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // Form1
             // 
@@ -111,12 +112,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnResult);
             this.Controls.Add(this.cbJob);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbResultNumerator);
+            this.Controls.Add(this.tbResultDenominator);
+            this.Controls.Add(this.tbDenominator2);
+            this.Controls.Add(this.tbNumerator2);
+            this.Controls.Add(this.tbDenominator1);
+            this.Controls.Add(this.tbNumerator1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -126,12 +127,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbNumerator1;
+        private System.Windows.Forms.TextBox tbDenominator1;
+        private System.Windows.Forms.TextBox tbNumerator2;
+        private System.Windows.Forms.TextBox tbDenominator2;
+        private System.Windows.Forms.TextBox tbResultDenominator;
+        private System.Windows.Forms.TextBox tbResultNumerator;
         private System.Windows.Forms.ComboBox cbJob;
         private System.Windows.Forms.Button btnResult;
     }
