@@ -30,6 +30,12 @@ namespace Fractions
 
             switch (cbJob.SelectedItem)
             {
+                case "+":
+                    Result = First.PlusFractions(Second);
+                    break;
+                case "-":
+                    Result = First.SubstractFractions(Second);
+                    break;
                 case "*": Result = First.MultiFractions(Second);
                     break;
                 case "/": Result = First.DividingFractions(Second);
