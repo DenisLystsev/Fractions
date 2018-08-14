@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace Fractions
 {
     class Fractions
     {
+        int fullTile;
         int numerator;
         int denominator;
+
+        public Fractions(int full, int num, int den)
+        {
+            fullTile = full;
+            numerator = num;
+            denominator = den;
+        }
 
         public Fractions(int num, int den)
         {

@@ -24,21 +24,44 @@ namespace Fractions
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            Fractions First = new Fractions(int.Parse(tbNumerator1.Text), int.Parse(tbDenominator1.Text));
-            Fractions Second = new Fractions(int.Parse(tbNumerator2.Text), int.Parse(tbDenominator2.Text));
-            Fractions Result = new Fractions(0,0);
+            Fractions First;
+            //= new Fractions(0, 0);
+            Fractions Second;
+                //= new Fractions(0, 0);
+            Fractions Result;
+
+            if(tbFullTile1.Text == "" || tbFullTile1.Text == "0")
+            {
+                First = new Fractions(int.Parse(tbNumerator1.Text), int.Parse(tbDenominator1.Text));
+            }
+            else
+            {
+                First = new Fractions(int.Parse(tbFullTile1.Text), int.Parse(tbNumerator1.Text), int.Parse(tbDenominator1.Text));
+            }
+
+            if (tbFullTile2.Text == "" || tbFullTile2.Text == "0")
+            {
+                Second = new Fractions(int.Parse(tbNumerator2.Text), int.Parse(tbDenominator2.Text));
+            }
+            else
+            {
+                Second = new Fractions(int.Parse(tbFullTile2.Text), int.Parse(tbNumerator2.Text), int.Parse(tbDenominator2.Text));
+            }
+
+
+            Result = new Fractions(0,0);
 
             switch (cbJob.SelectedItem)
             {
-                case "+":
+                case "Сложить":
                     Result = First.PlusFractions(Second);
                     break;
-                case "-":
+                case "Вычесть":
                     Result = First.SubstractFractions(Second);
                     break;
-                case "*": Result = First.MultiFractions(Second);
+                case "Умножить": Result = First.MultiFractions(Second);
                     break;
-                case "/": Result = First.DividingFractions(Second);
+                case "Разделить": Result = First.DividingFractions(Second);
                     break;
             }
 
