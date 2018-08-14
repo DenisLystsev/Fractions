@@ -45,6 +45,7 @@
             this.tbFullTile1 = new System.Windows.Forms.TextBox();
             this.tbFullTile2 = new System.Windows.Forms.TextBox();
             this.tbResultFullTile = new System.Windows.Forms.TextBox();
+            this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             this.tbResultDenominator.BackColor = System.Drawing.SystemColors.Window;
             this.tbResultDenominator.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbResultDenominator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbResultDenominator.Location = new System.Drawing.Point(433, 86);
+            this.tbResultDenominator.Location = new System.Drawing.Point(434, 86);
             this.tbResultDenominator.Name = "tbResultDenominator";
             this.tbResultDenominator.ReadOnly = true;
             this.tbResultDenominator.Size = new System.Drawing.Size(30, 26);
@@ -107,7 +108,7 @@
             this.tbResultNumerator.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbResultNumerator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbResultNumerator.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tbResultNumerator.Location = new System.Drawing.Point(433, 54);
+            this.tbResultNumerator.Location = new System.Drawing.Point(434, 54);
             this.tbResultNumerator.Name = "tbResultNumerator";
             this.tbResultNumerator.ReadOnly = true;
             this.tbResultNumerator.Size = new System.Drawing.Size(30, 26);
@@ -167,11 +168,13 @@
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // справкаToolStripMenuItem
             // 
             this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.оПрограммеToolStripMenuItem,
+            this.помощьToolStripMenuItem,
             this.авторToolStripMenuItem});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
@@ -182,12 +185,14 @@
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // авторToolStripMenuItem
             // 
             this.авторToolStripMenuItem.Name = "авторToolStripMenuItem";
             this.авторToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.авторToolStripMenuItem.Text = "Автор";
+            this.авторToolStripMenuItem.Click += new System.EventHandler(this.авторToolStripMenuItem_Click);
             // 
             // tbFullTile1
             // 
@@ -214,12 +219,19 @@
             this.tbResultFullTile.BackColor = System.Drawing.SystemColors.Window;
             this.tbResultFullTile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbResultFullTile.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbResultFullTile.Location = new System.Drawing.Point(397, 60);
+            this.tbResultFullTile.Location = new System.Drawing.Point(398, 60);
             this.tbResultFullTile.Name = "tbResultFullTile";
             this.tbResultFullTile.ReadOnly = true;
             this.tbResultFullTile.Size = new System.Drawing.Size(30, 38);
             this.tbResultFullTile.TabIndex = 12;
             this.tbResultFullTile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // помощьToolStripMenuItem
+            // 
+            this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
+            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.помощьToolStripMenuItem.Text = "Помощь";
+            this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -268,6 +280,7 @@
         private System.Windows.Forms.TextBox tbFullTile1;
         private System.Windows.Forms.TextBox tbFullTile2;
         private System.Windows.Forms.TextBox tbResultFullTile;
+        private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
     }
 }
 

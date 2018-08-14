@@ -45,5 +45,27 @@ namespace Fractions
             tbResultNumerator.Text = First.GetNumerator;
             tbResultDenominator.Text = First.GetDenominator;
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа для математических действий над дробями", "О программе");
+        }
+
+        private void помощьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1 - Введите значения дробных чисел" + "\n" +
+                "2 - Выберите действие из выпадающего списка" + "\n" +
+                "3 - Нажмите кнопку \"Результат\" ", "Помощь");
+        }
+
+        private void авторToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Стесняется","Автор");
+        }
     }
 }
