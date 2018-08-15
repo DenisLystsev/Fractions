@@ -49,7 +49,7 @@ namespace Fractions
             }
 
 
-            Result = new Fractions(0,0);
+            Result = new Fractions(0, 0, 0);
 
             switch (cbJob.SelectedItem)
             {
@@ -65,8 +65,9 @@ namespace Fractions
                     break;
             }
 
-            tbResultNumerator.Text = First.GetNumerator;
-            tbResultDenominator.Text = First.GetDenominator;
+            tbResultFullTile.Text = Result.GetFullTile;
+            tbResultNumerator.Text = Result.GetNumerator;
+            tbResultDenominator.Text = Result.GetDenominator;
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
