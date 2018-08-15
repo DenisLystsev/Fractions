@@ -91,16 +91,31 @@ namespace Fractions
             return Result;
         }
 
-        //public string GetFullTile
-        //{
-        //    get
-        //    {
-        //        if (this.fullTile != 0)
-        //            return Convert.ToString(this.fullTile);
-        //        else
-        //            return "";
-        //    }
-        //}
+        void ExtractFullTile()
+        {
+            int count = 0;
+
+            do
+            {
+                if(this.numerator % this.denominator == 0)
+                {
+                    count++;
+                    this.numerator /= this.denominator;
+                }
+            }
+            while (this.numerator % this.denominator != 0);
+        }
+
+        public string GetFullTile
+        {
+            get
+            {
+                if (this.fullTile != 0)
+                    return Convert.ToString(this.fullTile);
+                else
+                    return "";
+            }
+        }
 
         public string GetNumerator
         {
